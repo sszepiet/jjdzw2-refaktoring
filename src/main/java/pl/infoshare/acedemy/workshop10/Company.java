@@ -5,8 +5,8 @@ import java.util.List;
 
 public class Company {
 
-    String name;
-    List<Employee> employees;
+    private String name;
+    private List<Employee> employees;
 
     public Company(String name) {
         this.name = name;
@@ -27,11 +27,19 @@ public class Company {
         System.out.println("--- " + name + " employees ---");
         for (int i = 0; i < employees.size(); i++) {
             final int ordinal = i + 1;
-            System.out.println(ordinal + ". " + employees.get(i).title);
+            System.out.println(ordinal + ". " + employees.get(i).getTitle());
         }
     }
 
     private Employee prepareEmployee(String title, ExperienceLevel experienceLevel) {
         return new Employee(title, experienceLevel);
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public List<Employee> getEmployees() {
+        return employees;
     }
 }
