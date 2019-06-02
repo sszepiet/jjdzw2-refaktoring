@@ -1,16 +1,16 @@
 package pl.infoshare.acedemy.workshop7;
 
-public class App {
+public class RenamedApp {
 
     private static final String INFOSHARE = "infoShare Academy";
     private static final Company company = new Company(INFOSHARE);
 
     public static void main(final String[] args) {
-        hireEmployees(company);
+        hireManagement(company);
         listEmployees(company);
     }
 
-    private static void hireEmployees(Company company) {
+    private static void hireManagement(Company company) {
         final Employee cto = prepareEmployee(Employee.TITLE_CTO);
         final Employee cfo = prepareEmployee(Employee.TITLE_CFO);
         final Employee coo = prepareEmployee(Employee.TITLE_COO);
