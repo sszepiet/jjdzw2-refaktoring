@@ -6,9 +6,13 @@ public class App {
 
         Company company = new Company("infoShare Academy");
 
-        company.employees.add(new Employee("CTO"));
-        company.employees.add(new Employee("CFO"));
-        company.employees.add(new Employee("COO"));
+        final Employee cto = new Employee("CTO");
+        final Employee cfo = new Employee("CFO");
+        final Employee coo = new Employee("COO");
+
+        company.employees.add(cto);
+        company.employees.add(cfo);
+        company.employees.add(coo);
 
         System.out.println("--- " + company.name + " employees ---");
         for (int i = 0; i < company.employees.size(); i++) {

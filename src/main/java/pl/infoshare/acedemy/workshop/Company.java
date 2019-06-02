@@ -10,6 +10,6 @@ public class Company {
 
     public Company(String name) {
         this.name = name;
-        this.employees = new ArrayList<Employee>();
+        this.employees = new ArrayList<>();
     }
 }
