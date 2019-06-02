@@ -7,7 +7,4 @@ public class CFOEmployee extends BaseEmployee {
         super(firstName, lastName, Title.CFO);
     }
 
-    public void work() {
-
-    }
 }

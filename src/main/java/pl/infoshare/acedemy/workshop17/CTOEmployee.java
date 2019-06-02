@@ -8,7 +8,4 @@ public class CTOEmployee extends BaseEmployee {
         super(firstName, lastName, Title.CTO);
     }
 
-    public void work() {
-
-    }
 }

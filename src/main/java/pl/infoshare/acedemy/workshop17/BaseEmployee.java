@@ -2,7 +2,7 @@ package pl.infoshare.acedemy.workshop17;
 
 import pl.infoshare.acedemy.workshop15.Title;
 
-public class BaseEmployee {
+public abstract class BaseEmployee implements Employee {
     private final String firstName;
     private final String lastName;
     private final Title title;
@@ -13,4 +13,6 @@ public class BaseEmployee {
         this.title = title;
     }
 
+    @Override
+    public abstract void work();
 }
