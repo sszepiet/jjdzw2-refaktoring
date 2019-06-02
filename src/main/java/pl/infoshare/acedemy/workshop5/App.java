@@ -6,11 +6,11 @@ public class App {
     private static final Company company = new Company(INFOSHARE);
 
     public static void main(final String[] args) {
-        hireEmployees();
+        hireEmployees(company);
         listEmployees();
     }
 
-    private static void hireEmployees() {
+    private static void hireEmployees(Company company) {
         final Employee cto = prepareEmployee(Employee.TITLE_CTO);
         final Employee cfo = prepareEmployee(Employee.TITLE_CFO);
         final Employee coo = prepareEmployee(Employee.TITLE_COO);
