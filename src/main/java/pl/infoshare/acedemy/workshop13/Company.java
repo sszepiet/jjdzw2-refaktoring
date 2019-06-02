@@ -17,9 +17,24 @@ public class Company {
     }
 
     public void hireManagement() {
-        final Employee cto = recruitmentAgency.prepareEmployee(Employee.TITLE_CTO, ExperienceLevel.SENIOR);
-        final Employee cfo = recruitmentAgency.prepareEmployee(Employee.TITLE_CFO, ExperienceLevel.MID);
-        final Employee coo = recruitmentAgency.prepareEmployee(Employee.TITLE_COO, ExperienceLevel.MID);
+        final VacancyRequirements ctoRequirements = new VacancyRequirements.VacancyRequirementsBuilder()
+                        .setTitle(Employee.TITLE_CTO)
+                        .setExperienceLevel(ExperienceLevel.SENIOR)
+                        .createVacancyRequirements();
+        final Employee cto = recruitmentAgency.prepareEmployee(ctoRequirements);
+
+        final VacancyRequirements cfoRequirements = new VacancyRequirements.VacancyRequirementsBuilder()
+                .setTitle(Employee.TITLE_CFO)
+                .setExperienceLevel(ExperienceLevel.MID)
+                .createVacancyRequirements();
+        final Employee cfo = recruitmentAgency.prepareEmployee(cfoRequirements);
+
+        final VacancyRequirements cooRequirements =
+                new VacancyRequirements.VacancyRequirementsBuilder()
+                        .setTitle(Employee.TITLE_COO)
+                        .setExperienceLevel(ExperienceLevel.MID)
+                        .createVacancyRequirements();
+        final Employee coo = recruitmentAgency.prepareEmployee(cooRequirements);
 
         employees.add(cto);
         employees.add(cfo);

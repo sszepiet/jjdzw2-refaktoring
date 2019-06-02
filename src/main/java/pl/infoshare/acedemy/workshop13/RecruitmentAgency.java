@@ -4,7 +4,7 @@ public class RecruitmentAgency {
     public RecruitmentAgency() {
     }
 
-    Employee prepareEmployee(String title, ExperienceLevel experienceLevel) {
-        return new Employee(title, experienceLevel);
+    Employee prepareEmployee(VacancyRequirements vacancyRequirements) {
+        return new Employee(vacancyRequirements.getTitle(), vacancyRequirements.getExperienceLevel());
     }
 }
