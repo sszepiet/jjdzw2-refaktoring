@@ -21,4 +21,4 @@ All workshops changes are in separate commits.
 * Workshop 14: Type migration
 * Workshop 15: Superclass
 * Workshop 16: PullMembersUpDown
-* Workshop 16: Extract interface
+* Workshop 17: Extract interface
