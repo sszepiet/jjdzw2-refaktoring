@@ -1,19 +1,16 @@
 package pl.infoshare.acedemy.workshop8;
 
-import java.util.ArrayList;
-import java.util.List;
+public class RenamedAppCopy {
 
-public class Company {
+    private static final String INFOSHARE = "infoShare Academy";
+    private static final Company company = new Company(INFOSHARE);
 
-    String name;
-    List<Employee> employees;
-
-    public Company(String name) {
-        this.name = name;
-        this.employees = new ArrayList<>();
+    public static void main(final String[] args) {
+        hireManagement(company);
+        listEmployees(company);
     }
 
-    public void hireManagement(Company company) {
+    private static void hireManagement(Company company) {
         final Employee cto = prepareEmployee(Employee.TITLE_CTO);
         final Employee cfo = prepareEmployee(Employee.TITLE_CFO);
         final Employee coo = prepareEmployee(Employee.TITLE_COO);
@@ -23,7 +20,11 @@ public class Company {
         company.employees.add(coo);
     }
 
-    public void listEmployees(Company company) {
+    private static Employee prepareEmployee(String title) {
+        return new Employee(title);
+    }
+
+    private static void listEmployees(Company company) {
         System.out.println("--- " + company.name + " employees ---");
         for (int i = 0; i < company.employees.size(); i++) {
             final int ordinal = i + 1;
@@ -31,7 +32,4 @@ public class Company {
         }
     }
 
-    private Employee prepareEmployee(String title) {
-        return new Employee(title);
-    }
 }
