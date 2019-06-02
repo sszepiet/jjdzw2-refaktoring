@@ -26,18 +26,10 @@ public class App {
 
     private static void listEmployees(Company company) {
         System.out.println("--- " + company.name + " employees ---");
-        for (int i = 0; i < getCompanySize(company); i++) {
-            final int ordinal = incrementNumber(i);
+        for (int i = 0; i < company.employees.size(); i++) {
+            final int ordinal = i + 1;
             System.out.println(ordinal + ". " + company.employees.get(i).title);
         }
-    }
-
-    private static int getCompanySize(Company company) {
-        return company.employees.size();
-    }
-
-    private static int incrementNumber(int i) {
-        return i + 1;
     }
 
 }
