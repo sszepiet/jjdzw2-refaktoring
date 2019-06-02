@@ -2,11 +2,10 @@ package pl.infoshare.acedemy.workshop3;
 
 public class App {
 
-    public static final String INFOSHARE = "infoShare Academy";
+    private static final String INFOSHARE = "infoShare Academy";
+    private static final Company company = new Company(INFOSHARE);
 
     public static void main(final String[] args) {
-
-        Company company = new Company(INFOSHARE);
 
         final Employee cto = new Employee(Employee.TITLE_CTO);
         final Employee cfo = new Employee(Employee.TITLE_CFO);
