@@ -5,6 +5,7 @@ import java.util.List;
 
 public class Company {
 
+    private final RecruitmentAgency recruitmentAgency = new RecruitmentAgency();
     private String name;
     private List<Employee> employees;
 
@@ -14,9 +15,9 @@ public class Company {
     }
 
     public void hireManagement() {
-        final Employee cto = prepareEmployee(Employee.TITLE_CTO, ExperienceLevel.SENIOR);
-        final Employee cfo = prepareEmployee(Employee.TITLE_CFO, ExperienceLevel.MID);
-        final Employee coo = prepareEmployee(Employee.TITLE_COO, ExperienceLevel.MID);
+        final Employee cto = recruitmentAgency.prepareEmployee(Employee.TITLE_CTO, ExperienceLevel.SENIOR);
+        final Employee cfo = recruitmentAgency.prepareEmployee(Employee.TITLE_CFO, ExperienceLevel.MID);
+        final Employee coo = recruitmentAgency.prepareEmployee(Employee.TITLE_COO, ExperienceLevel.MID);
 
         employees.add(cto);
         employees.add(cfo);
@@ -29,10 +30,6 @@ public class Company {
             final int ordinal = i + 1;
             System.out.println(ordinal + ". " + employees.get(i).getTitle());
         }
-    }
-
-    private Employee prepareEmployee(String title, ExperienceLevel experienceLevel) {
-        return new Employee(title, experienceLevel);
     }
 
     public String getName() {
