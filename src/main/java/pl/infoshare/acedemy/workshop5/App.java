@@ -7,7 +7,7 @@ public class App {
 
     public static void main(final String[] args) {
         hireEmployees(company);
-        listEmployees();
+        listEmployees(company);
     }
 
     private static void hireEmployees(Company company) {
@@ -24,7 +24,7 @@ public class App {
         return new Employee(title);
     }
 
-    private static void listEmployees() {
+    private static void listEmployees(Company company) {
         System.out.println("--- " + company.name + " employees ---");
         for (int i = 0; i < company.employees.size(); i++) {
             final int ordinal = i + 1;
