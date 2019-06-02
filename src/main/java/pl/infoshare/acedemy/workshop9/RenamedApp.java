@@ -6,8 +6,8 @@ public class RenamedApp {
 
     public static void main(final String[] args) {
         final Company company = new Company(INFOSHARE);
-        company.hireManagement(company);
-        company.listEmployees(company);
+        company.hireManagement();
+        company.listEmployees();
     }
 
 }
