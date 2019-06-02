@@ -13,7 +13,7 @@ public class Company {
     public Company(String name) {
         this.name = name;
         this.employees = new ArrayList<>();
-        address = new Address("Puławska", 2, "Warszawa");
+        address = new Address.AddressBuilder().setStreet("Puławska").setNumber(2).setCity("Warszawa").createAddress();
     }
 
     public void hireManagement() {
