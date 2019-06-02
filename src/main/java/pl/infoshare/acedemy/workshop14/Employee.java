@@ -6,15 +6,15 @@ public class Employee {
     static final String TITLE_CFO = "CFO";
     static final String TITLE_COO = "COO";
 
-    private String title;
+    private Title title;
     private ExperienceLevel experienceLevel;
 
-    public Employee(String title, ExperienceLevel experienceLevel) {
+    public Employee(Title title, ExperienceLevel experienceLevel) {
         this.title = title;
         this.experienceLevel = experienceLevel;
     }
 
-    public String getTitle() {
+    public Title getTitle() {
         return title;
     }
 

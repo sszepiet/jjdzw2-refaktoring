@@ -5,6 +5,6 @@ public class RecruitmentAgency {
     }
 
     Employee prepareEmployee(VacancyRequirements vacancyRequirements) {
-        return new Employee(vacancyRequirements.getTitle(), vacancyRequirements.getExperienceLevel());
+        return new Employee(Title.valueOf(vacancyRequirements.getTitle()), vacancyRequirements.getExperienceLevel());
     }
 }
