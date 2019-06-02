@@ -1,4 +1,4 @@
-package pl.infoshare.acedemy.workshop1;
+package pl.infoshare.acedemy.workshop2;
 
 public class App {
 
@@ -8,9 +8,9 @@ public class App {
 
         Company company = new Company(INFOSHARE);
 
-        final Employee cto = new Employee("CTO");
-        final Employee cfo = new Employee("CFO");
-        final Employee coo = new Employee("COO");
+        final Employee cto = new Employee(Employee.TITLE_CTO);
+        final Employee cfo = new Employee(Employee.TITLE_CFO);
+        final Employee coo = new Employee(Employee.TITLE_COO);
 
         company.employees.add(cto);
         company.employees.add(cfo);
